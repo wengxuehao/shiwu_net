@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is 植物 search</title>
+</head>
+<body
+        background="/static/media/lant.jpg"
+        style=" background-repeat:no-repeat ;
+background-size:100% 100%;
+background-attachment: fixed"
+>
+<div>这是植物识别页面</div>
+<p>上传植物图片</p>
+<form name="imgForm" id="imgForm" enctype="multipart/form-data" action="" method='post'>
+    <input class="input-loc-img" name="pic" id="imgLocal" type='file' accept="image/*" @change="selectImg"/>
+    <input type="submit" name="" value="提交">
+    <input type="button" name="" value="重置" onclick="clear()">
+</form>
+</body>
+</html>
