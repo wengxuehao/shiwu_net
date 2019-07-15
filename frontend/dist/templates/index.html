@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="viewport" content="user-scalable=no, width=device-width"/>
-  <link rel="shortcut icon" href="/static/media/favicon.ico">
-  <title>识物.net图像识别</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width"/>
+    <link rel="shortcut icon" href="/static/media/favicon.ico">
+    <title>识物.net图像识别</title>
 </head>
 <body background="/static/media/lant.jpg"
       style=" background-repeat:no-repeat ;
@@ -15,32 +15,32 @@ background-size:100% 100%;
 background-attachment: fixed;
 height: 100%">
 <div class="bigdiv" style="height: 100%">
-  <div style="height:233px;margin-top:89px;text-align: center" id="lga">
-    <img alt="识物.net" id="hplogo"
-         src="/static/media/search.png"
-         style="padding-top:95px;width: 150px"
-    >
-  </div>
-  <div style="text-align: right;">
-    <a href="/user/register">注册</a>
-    <a href="/user/login">登录</a>
-  </div>
-  <div style="text-align:center;" id="ul">
-    <div style="font-size: 20px">服务种类如下</div>
-    <a href="/service/voice">语音服务</a>
-    <a href="/service/Vision">视觉技术服务</a>
-    <a href="/service/NLP">自然语言处理</a>
-  </div>
+    <div style="height:233px;margin-top:89px;text-align: center" id="lga">
+        <img alt="识物.net" id="hplogo"
+             src="/static/media/search.png"
+             style="padding-top:95px;width: 150px"
+        >
+    </div>
+    <div style="text-align: right;">
+        <a href="/user/register">注册</a>
+        <a href="/user/login">登录</a>
+    </div>
+    <div style="text-align:center;" id="ul">
+        <div style="font-size: 20px">服务种类如下</div>
+        <a href="{% url 'service:Voice' %}">语音服务</a>
+        <a href="{% url 'service:Vision' %}">视觉技术服务</a>
+        <a href="{% url 'service:NLP' %}">自然语言处理</a>
+    </div>
 
 
 </div>
 <div data-ux="Layout" style="position: absolute; bottom: 10px; right: 790px;">
-  <div data-ux="Heading" data-aid="FOOTER_COPYRIGHT_RENDERED" data-route="copyright">
-    <p>
-      <span>版权© 2019 识物.net -保留所有权利。</span>
-    </p>
-  </div>
-  <h5 style="text-align: center"><span>由 wystech.xyz提供技术支持</span></h5>
+    <div data-ux="Heading" data-aid="FOOTER_COPYRIGHT_RENDERED" data-route="copyright">
+        <p>
+            <span>版权© 2019 识物.net -保留所有权利。</span>
+        </p>
+    </div>
+    <h5 style="text-align: center"><span>由 wystech.xyz提供技术支持</span></h5>
 </div>
 
 </body>

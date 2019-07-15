@@ -35,6 +35,7 @@ class UserView(View):
                 # print('密码正确')
                 if password1 == password2:
                     # print('两次密码一致')
+                    # 登陆成功，并跳转到主页，且主页显示用户名
                     return HttpResponse('登陆成功')
                 else:
                     # print('两次密码不一致')
@@ -62,7 +63,11 @@ class Register_View(View):
         user.password = ps
         user.save()
         print('用户注册成功，并登录到主页')
-        return render(request, 'user/index.html')
+        # 把用户信息返回给前端，来渲染主页的用户信息
+        data = {
+            "username": user.username,
+        }
+        return render(request, 'user/index.html',{"data":data})
 
 
 class User_manage(View):

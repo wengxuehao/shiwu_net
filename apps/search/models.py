@@ -11,6 +11,7 @@ class Recognize_model(models.Model):
 
     class Meta:
         verbose_name = '识别种类模型'
+        db_table = 'Recognize_Model'
         verbose_name_plural = verbose_name
 
     def __str__(self):

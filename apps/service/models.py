@@ -10,6 +10,7 @@ class Service_model(models.Model):
 
     class Meta:
         verbose_name = '服务名称'
+        db_table = 'Service_Model'
         verbose_name_plural = verbose_name
 
     def __str__(self):
