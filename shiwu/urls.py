@@ -27,6 +27,5 @@ urlpatterns = [
     path('user/', include('apps.users.urls')),
     path('search/', include('apps.search.urls')),
     path('service/', include('apps.service.urls')),
-    path('nlp/',include('apps.nlp.urls')),
-    path('voice/',include('apps.voice.urls'))
+    path('nlp/',include('apps.nlp.urls'))
 ]
