@@ -139,3 +139,6 @@ STATICFILES_DIRS = [  ## 添加静态文件路径
 
 # 扩展user
 AUTH_USER_MODEL = 'users.User'
+APP_ID_BAIDU= '16537230'
+API_KEY_BAIDU = 'C3BCar6tooDKYcbfBuxI7nu6'
+SECRET_KEY_BAIDU = '5PAl9X8uoBbAbRpYlzXXcUqnRKGq0cvs'
