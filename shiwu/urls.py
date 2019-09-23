@@ -15,17 +15,36 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from django.db import router
-from django.views.generic.base import TemplateView
-from django.urls import path,include
 
+from django.views.generic.base import TemplateView
+from django.urls import path, include
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path(r'', TemplateView.as_view(template_name="user/index.html")),    ## 这里将url的根路径指向vue中的index页面
+#     # url(r'^', include(router.urls)),
+#     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+#     path('user/', include('apps.users.urls')),
+#     path('search/', include('apps.search.urls')),
+#     path('service/', include('apps.service.urls')),
+#     path('nlp/',include('apps.nlp.urls'))
+# ]
+from rest_framework import routers
+
+from apps.users import views
+
+router = routers.DefaultRouter()
+router.register(r'users', views.UserViewSet)
+# router.register(r'groups', views.GroupViewSet)
+
+# Wire up our API using automatic URL routing.
+# Additionally, we include login URLs for the browsable API.
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path(r'', TemplateView.as_view(template_name="user/index.html")),    ## 这里将url的根路径指向vue中的index页面
-    # url(r'^', include(router.urls)),
+    url(r'^', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('user/', include('apps.users.urls')),
     path('search/', include('apps.search.urls')),
     path('service/', include('apps.service.urls')),
-    path('nlp/',include('apps.nlp.urls'))
+    path('nlp/', include('apps.nlp.urls'))
 ]

@@ -3,8 +3,10 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.views import View
+from rest_framework import viewsets
 
 from apps.service.models import Service_model
+from apps.users.serializers import UserSerializer
 from .models import User
 
 
@@ -14,6 +16,14 @@ class Index_view(View):
         # print(services)
         print('首页')
         return render(request, 'user/index.html')
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = User.objects.all().order_by('-date_joined')
+    serializer_class = UserSerializer
 
 
 class UserView(View):
@@ -67,7 +77,7 @@ class Register_View(View):
         data = {
             "username": user.username,
         }
-        return render(request, 'user/index.html',{"data":data})
+        return render(request, 'user/index.html', {"data": data})
 
 
 class User_manage(View):
