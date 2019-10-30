@@ -1,0 +1,577 @@
+INFO 2019-10-29 15:34:07,663 basehttp 154 "POST /user/register/ HTTP/1.1" 200 84
+ERROR 2019-10-29 15:34:52,310 views 76 ×¢²áÓÃ»§Ê§°Ü
+INFO 2019-10-29 15:34:52,311 basehttp 154 "POST /user/register/ HTTP/1.1" 200 84
+INFO 2019-10-29 15:35:28,534 basehttp 154 "POST /user/register/ HTTP/1.1" 200 114
+ERROR 2019-10-29 15:37:48,015 log 228 Internal Server Error: /user/login
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\utils\deprecation.py", line 90, in __call__
+    response = self.process_request(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\middleware\common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\middleware\common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 192.168.56.176:8080/user/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-10-29 15:37:48,017 basehttp 154 "POST /user/login HTTP/1.1" 500 69466
+INFO 2019-10-29 15:37:53,394 basehttp 154 "POST /user/login/ HTTP/1.1" 200 12
+INFO 2019-10-29 15:40:56,119 basehttp 154 "POST /user/login/ HTTP/1.1" 200 108
+INFO 2019-10-29 15:41:25,780 basehttp 154 "POST /user/login/ HTTP/1.1" 200 114
+INFO 2019-10-29 15:41:33,413 basehttp 154 "POST /user/login/ HTTP/1.1" 200 102
+ERROR 2019-10-29 15:42:01,683 views 74 ×¢²áÓÃ»§Ê§°Ü
+INFO 2019-10-29 15:42:01,684 basehttp 154 "POST /user/register/ HTTP/1.1" 200 84
+ERROR 2019-10-29 15:42:30,978 views 74 ×¢²áÓÃ»§Ê§°Ü
+INFO 2019-10-29 15:42:30,978 basehttp 154 "POST /user/register/ HTTP/1.1" 200 84
+INFO 2019-10-29 15:42:44,408 basehttp 154 "POST /user/login/ HTTP/1.1" 200 102
+INFO 2019-10-29 15:43:23,275 basehttp 154 "POST /user/login/ HTTP/1.1" 200 42
+INFO 2019-10-29 15:43:40,166 basehttp 154 "POST /user/login/ HTTP/1.1" 200 42
+INFO 2019-10-29 15:43:53,978 basehttp 154 "POST /user/login/ HTTP/1.1" 200 102
+INFO 2019-10-29 15:44:35,784 basehttp 154 "POST /user/login/ HTTP/1.1" 200 78
+INFO 2019-10-29 15:46:01,001 basehttp 154 "POST /user/register/ HTTP/1.1" 200 123
+ERROR 2019-10-29 15:53:53,752 log 228 Internal Server Error: /user/register/
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 727, in _read_query_result
+    result.read()
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1054, "Unknown column 'User.user_Id' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\wxh\shiwu\apps\users\views.py", line 73, in post
+    if name_database:
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\models\query.py", line 272, in __bool__
+    self._fetch_all()
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\models\query.py", line 1186, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\models\sql\compiler.py", line 1065, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 727, in _read_query_result
+    result.read()
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.InternalError: (1054, "Unknown column 'User.user_Id' in 'field list'")
+ERROR 2019-10-29 15:53:53,757 basehttp 154 "POST /user/register/ HTTP/1.1" 500 206540
+ERROR 2019-10-29 15:57:26,595 views 74 ×¢²áÓÃ»§Ê§°Ü
+INFO 2019-10-29 15:57:26,596 basehttp 154 "POST /user/register/ HTTP/1.1" 200 84
+INFO 2019-10-29 15:58:43,301 basehttp 154 "POST /user/register/ HTTP/1.1" 200 124
+ERROR 2019-10-29 16:03:43,659 views 74 ×¢²áÓÃ»§Ê§°Ü
+INFO 2019-10-29 16:03:43,660 basehttp 154 "POST /user/register/ HTTP/1.1" 200 84
+ERROR 2019-10-29 16:03:47,621 log 228 Internal Server Error: /user/register/
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\wxh\shiwu\apps\users\views.py", line 91, in post
+    "id": user.user_num
+AttributeError: 'User' object has no attribute 'user_num'
+ERROR 2019-10-29 16:03:47,623 basehttp 154 "POST /user/register/ HTTP/1.1" 500 80636
+ERROR 2019-10-29 16:04:55,021 views 74 ×¢²áÓÃ»§Ê§°Ü
+INFO 2019-10-29 16:04:55,023 basehttp 154 "POST /user/register/ HTTP/1.1" 200 84
+ERROR 2019-10-29 16:05:01,741 log 228 Internal Server Error: /user/register/
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\wxh\shiwu\apps\users\views.py", line 91, in post
+    "id": user.user_num
+AttributeError: 'User' object has no attribute 'user_num'
+ERROR 2019-10-29 16:05:01,744 basehttp 154 "POST /user/register/ HTTP/1.1" 500 80645
+ERROR 2019-10-29 16:07:33,795 views 74 ×¢²áÓÃ»§Ê§°Ü
+INFO 2019-10-29 16:07:33,796 basehttp 154 "POST /user/register/ HTTP/1.1" 200 84
+INFO 2019-10-29 16:07:48,123 basehttp 154 "POST /user/register/ HTTP/1.1" 200 148
+ERROR 2019-10-29 16:14:26,212 log 228 Internal Server Error: /user/register/
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 727, in _read_query_result
+    result.read()
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'shiwu.user' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\wxh\shiwu\apps\users\views.py", line 75, in post
+    if name_database:
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\models\query.py", line 272, in __bool__
+    self._fetch_all()
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\models\query.py", line 1186, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\models\query.py", line 54, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\models\sql\compiler.py", line 1065, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 727, in _read_query_result
+    result.read()
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\ÎÌÑ§ºÀ\AppData\Roaming\Python\Python36\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'shiwu.user' doesn't exist")
+ERROR 2019-10-29 16:14:26,217 basehttp 154 "POST /user/register/ HTTP/1.1" 500 206326
+INFO 2019-10-29 16:16:23,474 basehttp 154 "POST /user/register/ HTTP/1.1" 200 128
+INFO 2019-10-29 16:16:56,019 basehttp 154 "POST /user/register/ HTTP/1.1" 200 202
+INFO 2019-10-29 16:18:23,742 basehttp 154 "POST /user/register/ HTTP/1.1" 200 137
+ERROR 2019-10-29 16:19:17,775 log 228 Internal Server Error: /user/register/
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\wxh\shiwu\apps\users\views.py", line 99, in post
+    return result.result(message='×¢²á³É¹¦', data=data)
+  File "D:\wxh\shiwu\utils\result.py", line 29, in result
+    return JsonResponse(json_dict)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\http\response.py", line 558, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "C:\Anaconda\envs\tensorflow\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\serializers\json.py", line 104, in default
+    return super().default(o)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'set' is not JSON serializable
+ERROR 2019-10-29 16:19:17,781 basehttp 154 "POST /user/register/ HTTP/1.1" 500 111617
+ERROR 2019-10-29 16:19:52,695 views 76 ×¢²áÓÃ»§Ê§°Ü
+INFO 2019-10-29 16:19:52,696 basehttp 154 "POST /user/register/ HTTP/1.1" 200 84
+INFO 2019-10-29 16:19:57,488 basehttp 154 "POST /user/register/ HTTP/1.1" 200 151
+INFO 2019-10-29 16:23:14,987 basehttp 154 "POST /user/register/ HTTP/1.1" 200 152
+INFO 2019-10-29 16:24:04,601 basehttp 154 "POST /user/register/ HTTP/1.1" 200 138
+INFO 2019-10-29 16:24:25,007 basehttp 154 "POST /user/register/ HTTP/1.1" 200 140
+INFO 2019-10-29 16:27:01,350 basehttp 154 "POST /user/login/ HTTP/1.1" 200 108
+ERROR 2019-10-29 16:35:36,368 log 228 Internal Server Error: /user/manage/
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\wxh\shiwu\apps\users\views.py", line 118, in put
+    name = request.PUT.get('name', '')
+AttributeError: 'WSGIRequest' object has no attribute 'PUT'
+ERROR 2019-10-29 16:35:36,371 basehttp 154 "PUT /user/manage/?name=wxh&telephone=13012311231&userid=w4GoV4sR28KOnYt&password=admin001 HTTP/1.1" 500 80613
+ERROR 2019-10-29 16:37:15,905 log 228 Internal Server Error: /user/manage/
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\wxh\shiwu\apps\users\views.py", line 118, in put
+    params = request.get_json()
+AttributeError: 'WSGIRequest' object has no attribute 'get_json'
+ERROR 2019-10-29 16:37:15,908 basehttp 154 "PUT /user/manage/?name=wxh&telephone=13012311231&userid=w4GoV4sR28KOnYt&password=admin001 HTTP/1.1" 500 80536
+WARNING 2019-10-29 16:41:28,335 base 93 Method Not Allowed (PUT): /user/manage/
+WARNING 2019-10-29 16:41:28,336 log 228 Method Not Allowed: /user/manage/
+WARNING 2019-10-29 16:41:28,336 basehttp 154 "PUT /user/manage/?name=wxh&telephone=13012311231&userid=w4GoV4sR28KOnYt&password=admin001 HTTP/1.1" 405 0
+ERROR 2019-10-29 16:41:37,569 log 228 Internal Server Error: /user/manage/
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\wxh\shiwu\apps\users\views.py", line 126, in post
+    user.save()
+AttributeError: 'QuerySet' object has no attribute 'save'
+ERROR 2019-10-29 16:41:37,572 basehttp 154 "POST /user/manage/?name=wxh&telephone=13012311231&userid=w4GoV4sR28KOnYt&password=admin001 HTTP/1.1" 500 80977
+ERROR 2019-10-29 16:42:29,130 log 228 Internal Server Error: /user/manage/
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\wxh\shiwu\apps\users\views.py", line 126, in post
+    user.save()
+AttributeError: 'QuerySet' object has no attribute 'save'
+ERROR 2019-10-29 16:42:29,132 basehttp 154 "POST /user/manage/ HTTP/1.1" 500 79993
+INFO 2019-10-29 16:42:45,774 basehttp 154 "POST /user/manage/ HTTP/1.1" 200 90
+INFO 2019-10-29 16:46:13,801 basehttp 154 "POST /user/manage/ HTTP/1.1" 200 90
+ERROR 2019-10-29 16:48:16,075 log 228 Internal Server Error: /user/manage/
+Traceback (most recent call last):
+  File "D:\wxh\shiwu\apps\users\views.py", line 124, in post
+    user = User.objects.get(user_num=user_num)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\models\query.py", line 399, in get
+    self.model._meta.object_name
+apps.users.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\wxh\shiwu\apps\users\views.py", line 131, in post
+    return result.params_error(message=e)
+  File "D:\wxh\shiwu\utils\result.py", line 47, in params_error
+    return result(code=HttpCode.params_error, message=message, data=data)
+  File "D:\wxh\shiwu\utils\result.py", line 29, in result
+    return JsonResponse(json_dict)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\http\response.py", line 558, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "C:\Anaconda\envs\tensorflow\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\serializers\json.py", line 104, in default
+    return super().default(o)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'DoesNotExist' is not JSON serializable
+ERROR 2019-10-29 16:48:16,079 basehttp 154 "POST /user/manage/ HTTP/1.1" 500 126341
+ERROR 2019-10-29 16:48:36,030 log 228 Internal Server Error: /user/manage/
+Traceback (most recent call last):
+  File "D:\wxh\shiwu\apps\users\views.py", line 128, in post
+    user.save()
+AttributeError: 'QuerySet' object has no attribute 'save'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\wxh\shiwu\apps\users\views.py", line 131, in post
+    return result.params_error(message=e)
+  File "D:\wxh\shiwu\utils\result.py", line 47, in params_error
+    return result(code=HttpCode.params_error, message=message, data=data)
+  File "D:\wxh\shiwu\utils\result.py", line 29, in result
+    return JsonResponse(json_dict)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\http\response.py", line 558, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "C:\Anaconda\envs\tensorflow\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\serializers\json.py", line 104, in default
+    return super().default(o)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'AttributeError' is not JSON serializable
+ERROR 2019-10-29 16:48:36,033 basehttp 154 "POST /user/manage/ HTTP/1.1" 500 117961
+ERROR 2019-10-29 16:49:05,665 log 228 Internal Server Error: /user/manage/
+Traceback (most recent call last):
+  File "D:\wxh\shiwu\apps\users\views.py", line 124, in post
+    user = User.objects.get(user_num=user_num)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\db\models\query.py", line 399, in get
+    self.model._meta.object_name
+apps.users.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\wxh\shiwu\apps\users\views.py", line 131, in post
+    return result.params_error(message=e)
+  File "D:\wxh\shiwu\utils\result.py", line 47, in params_error
+    return result(code=HttpCode.params_error, message=message, data=data)
+  File "D:\wxh\shiwu\utils\result.py", line 29, in result
+    return JsonResponse(json_dict)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\http\response.py", line 558, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "C:\Anaconda\envs\tensorflow\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\serializers\json.py", line 104, in default
+    return super().default(o)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'DoesNotExist' is not JSON serializable
+ERROR 2019-10-29 16:49:05,669 basehttp 154 "POST /user/manage/ HTTP/1.1" 500 126341
+ERROR 2019-10-29 16:50:51,942 log 228 Internal Server Error: /user/manage/
+Traceback (most recent call last):
+  File "D:\wxh\shiwu\apps\users\views.py", line 125, in post
+    user.telephone = telephone
+AttributeError: 'NoneType' object has no attribute 'telephone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\wxh\shiwu\apps\users\views.py", line 131, in post
+    return result.params_error(message=e)
+  File "D:\wxh\shiwu\utils\result.py", line 47, in params_error
+    return result(code=HttpCode.params_error, message=message, data=data)
+  File "D:\wxh\shiwu\utils\result.py", line 29, in result
+    return JsonResponse(json_dict)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\http\response.py", line 558, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "C:\Anaconda\envs\tensorflow\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\serializers\json.py", line 104, in default
+    return super().default(o)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'AttributeError' is not JSON serializable
+ERROR 2019-10-29 16:50:51,945 basehttp 154 "POST /user/manage/ HTTP/1.1" 500 118570
+ERROR 2019-10-29 16:51:28,970 log 228 Internal Server Error: /user/manage/
+Traceback (most recent call last):
+  File "D:\wxh\shiwu\apps\users\views.py", line 126, in post
+    user.telephone = telephone
+AttributeError: 'NoneType' object has no attribute 'telephone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\wxh\shiwu\apps\users\views.py", line 132, in post
+    return result.params_error(message=e)
+  File "D:\wxh\shiwu\utils\result.py", line 47, in params_error
+    return result(code=HttpCode.params_error, message=message, data=data)
+  File "D:\wxh\shiwu\utils\result.py", line 29, in result
+    return JsonResponse(json_dict)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\http\response.py", line 558, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "C:\Anaconda\envs\tensorflow\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\serializers\json.py", line 104, in default
+    return super().default(o)
+  File "C:\Anaconda\envs\tensorflow\lib\json\encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'AttributeError' is not JSON serializable
+ERROR 2019-10-29 16:51:28,974 basehttp 154 "POST /user/manage/ HTTP/1.1" 500 118492
+INFO 2019-10-29 16:52:21,569 basehttp 154 "POST /user/manage/ HTTP/1.1" 200 84
+INFO 2019-10-29 16:52:28,249 basehttp 154 "POST /user/manage/ HTTP/1.1" 200 90
+ERROR 2019-10-29 16:53:09,061 views 78 ×¢²áÓÃ»§Ê§°Ü
+INFO 2019-10-29 16:53:09,062 basehttp 154 "POST /user/register/ HTTP/1.1" 200 84
+ERROR 2019-10-29 16:53:23,457 views 79 ×¢²áÓÃ»§Ê§°Ü
+INFO 2019-10-29 16:53:23,458 basehttp 154 "POST /user/register/ HTTP/1.1" 200 84
+ERROR 2019-10-29 16:53:31,166 views 79 ×¢²áÓÃ»§Ê§°Ü
+INFO 2019-10-29 16:53:31,167 basehttp 154 "POST /user/register/ HTTP/1.1" 200 84
+INFO 2019-10-29 16:54:01,092 basehttp 154 "POST /user/manage/ HTTP/1.1" 200 90
+INFO 2019-10-29 16:54:04,439 basehttp 154 "POST /user/manage/ HTTP/1.1" 200 84
+INFO 2019-10-29 16:57:05,600 basehttp 154 "POST /user/register/ HTTP/1.1" 200 140
+INFO 2019-10-29 16:58:05,052 basehttp 154 "POST /user/register/ HTTP/1.1" 200 163
+INFO 2019-10-29 16:59:08,707 basehttp 154 "POST /user/login/ HTTP/1.1" 200 108
+INFO 2019-10-29 16:59:27,742 basehttp 154 "POST /user/manage/ HTTP/1.1" 200 84
+INFO 2019-10-29 16:59:51,685 basehttp 154 "POST /user/manage/ HTTP/1.1" 200 84
+INFO 2019-10-29 17:00:01,328 basehttp 154 "POST /user/manage/ HTTP/1.1" 200 90
+WARNING 2019-10-29 17:10:26,805 log 228 Not Found: /6.js
+WARNING 2019-10-29 17:10:26,806 basehttp 154 "GET /6.js HTTP/1.0" 404 3550
+WARNING 2019-10-29 17:10:28,255 log 228 Not Found: /7.js
+WARNING 2019-10-29 17:10:28,256 basehttp 154 "GET /7.js HTTP/1.0" 404 3550
+WARNING 2019-10-29 17:10:29,919 log 228 Not Found: /6.js
+WARNING 2019-10-29 17:10:29,920 basehttp 154 "GET /6.js HTTP/1.0" 404 3550
+INFO 2019-10-29 17:10:31,611 basehttp 154 "GET / HTTP/1.0" 200 9714
+INFO 2019-10-29 17:10:31,639 basehttp 154 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.0" 200 3385
+INFO 2019-10-29 17:10:31,641 basehttp 154 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.0" 200 121457
+INFO 2019-10-29 17:10:31,652 basehttp 154 "GET /static/rest_framework/css/prettify.css HTTP/1.0" 200 817
+INFO 2019-10-29 17:10:31,656 basehttp 154 "GET /static/rest_framework/css/default.css HTTP/1.0" 200 1131
+INFO 2019-10-29 17:10:31,666 basehttp 154 "GET /static/rest_framework/js/csrf.js HTTP/1.0" 200 1719
+INFO 2019-10-29 17:10:31,669 basehttp 154 "GET /static/rest_framework/js/ajax-form.js HTTP/1.0" 200 3597
+INFO 2019-10-29 17:10:31,677 basehttp 154 "GET /static/rest_framework/img/grid.png HTTP/1.0" 200 1458
+INFO 2019-10-29 17:10:31,678 basehttp 154 "GET /static/rest_framework/js/prettify-min.js HTTP/1.0" 200 13632
+INFO 2019-10-29 17:10:31,686 basehttp 154 "GET /static/rest_framework/js/default.js HTTP/1.0" 200 1268
+INFO 2019-10-29 17:10:31,697 basehttp 154 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.0" 200 37608
+INFO 2019-10-29 17:10:31,731 basehttp 154 "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.0" 200 88145
+WARNING 2019-10-29 17:10:31,877 basehttp 154 "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.0" 404 1749

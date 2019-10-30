@@ -1,13 +1,20 @@
-from django.http import HttpResponse
+import random
+
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
 # Create your views here.
 from django.views import View
 from rest_framework import viewsets
 
+# from getrandom import ranstr
+from utils import result, getrandom
 from apps.service.models import Service_model
 from apps.users.serializers import UserSerializer
 from .models import User
+import logging
+
+logger = logging.getLogger("django")
 
 
 class Index_view(View):
@@ -42,42 +49,54 @@ class UserView(View):
             user = User.objects.get(username=username)
             password = user.password
             if password1 == password:
-                # print('密码正确')
                 if password1 == password2:
-                    # print('两次密码一致')
                     # 登陆成功，并跳转到主页，且主页显示用户名
-                    return HttpResponse('登陆成功')
+                    return result.result(message="两次密码一致，登陆成功")
                 else:
                     # print('两次密码不一致')
-                    return HttpResponse('两次密码不一致')
+                    return result.params_error(message="两次密码不一致，登陆失败")
             else:
-                print('密码不正确')
-            return HttpResponse('密码不正确')
+
+                return result.params_error(message="密码不正确，登陆失败")
         except Exception as e:
+            logger.error("用户登陆失败：", e)
             # print('没有这个用户%s' % e)
-            return HttpResponse('没有这个用户名，请先注册用户')
+            return result.params_error(message="请校验登录名")
 
 
 class Register_View(View):
     def get(self, request):
-        print('用户注册页面')
         return render(request, 'user/register.html')
 
     def post(self, request):
-        ps = request.POST.get('password')
+        password = request.POST.get('password')
         name = request.POST.get('name')
         email = request.POST.get('email')
-        user = User()
-        user.username = name
-        user.email = email
-        user.password = ps
-        user.save()
-        print('用户注册成功，并登录到主页')
-        # 把用户信息返回给前端，来渲染主页的用户信息
-        data = {
-            "username": user.username,
-        }
-        return render(request, 'user/index.html', {"data": data})
+        # 用户名唯一；需要校验数据库
+        name_database = User.objects.filter(username=name).first()
+        if name_database:
+            logger.error("注册用户失败")
+            return result.params_error(message="用户名已经存在")
+        else:
+            # 新建用户
+            try:
+                user = User()
+                user.username = name
+                user.email = email
+                user.password = password
+
+                user.save()
+            except Exception as e:
+                logger.error("注册用户失败：", e)
+                return result.params_error(message=e)
+            # 把用户信息返回给前端，来渲染主页的用户信息
+
+            data = {
+                "username": name,
+                "email": email,
+                "userid": user.id
+            }
+            return result.result(message='注册成功', data=data)
 
 
 class User_manage(View):
@@ -98,8 +117,18 @@ class User_manage(View):
         '''
         name = request.POST.get('name', '')
         telephone = request.POST.get('telephone', '')
-        user = User.objects.filter(id=id)
-        user.telephone = telephone
-        user.name = name
-        user.save()
-        return HttpResponse('ok')
+        password = request.POST.get('password', '')
+        user_num = request.POST.get('userid', '')
+        # 根据用户id来校验用户，修改用户信息id
+        try:
+            user = User.objects.filter(id=user_num).first()
+            if user:
+                user.telephone = telephone
+                user.name = name
+                user.password = password
+                user.save()
+                return result.result(message="用户信息修改成功")
+            else:
+                return result.params_error(message="用户编号不存在")
+        except Exception as e:
+            return result.params_error(message=e)
