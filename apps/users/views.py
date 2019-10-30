@@ -131,18 +131,23 @@ class User_manage(View):
         用户修改个人信息
         修改手机号码和用户名
         '''
-        name = request.POST.get('name', '')
+        username = request.POST.get('username', '')
         telephone = request.POST.get('telephone', '')
         password = request.POST.get('password', '')
-        user_num = request.POST.get('userid', '')
+        userid = request.POST.get('userid', '')
         # 根据用户id来校验用户，修改用户信息id
         try:
-            user = User.objects.filter(id=user_num).first()
-            if user:
-                user.telephone = telephone
-                user.name = name
-                user.password = password
-                user.save()
+            # query_result = User(id=userid)
+            # query_result.set_password(password)
+            #
+            # query_result.save()
+            # user = User.objects.filter(id=userid).first()
+            query_result = User(id=userid)
+            if query_result:
+                query_result.telephone = telephone
+                query_result.username = username
+                query_result.set_password(password)
+                query_result.save()
                 return result.result(message="用户信息修改成功")
             else:
                 return result.params_error(message="用户编号不存在")
