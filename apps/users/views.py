@@ -1,5 +1,6 @@
 import random
 
+from django.db.models import Q
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
@@ -11,7 +12,13 @@ from rest_framework import viewsets
 from utils import result, getrandom
 from apps.service.models import Service_model
 from apps.users.serializers import UserSerializer
-from .models import User
+# from .models import User
+from django.contrib import auth
+
+from django.contrib.auth import get_user_model
+from django.contrib.auth.hashers import make_password, check_password
+
+User = get_user_model()
 import logging
 
 logger = logging.getLogger("django")
@@ -46,22 +53,25 @@ class UserView(View):
         password1 = request.POST.get('password1')
         password2 = request.POST.get('password2')
         try:
-            user = User.objects.get(username=username)
-            password = user.password
-            if password1 == password:
+            # user = User.objects.get(username=username)
+
+            from django.contrib.auth import authenticate
+            user = authenticate(username=username, password=password1)
+            # django 内置的登录验证，如果获取到user对象则代表验证通过
+            if user:
                 if password1 == password2:
-                    # 登陆成功，并跳转到主页，且主页显示用户名
-                    return result.result(message="两次密码一致，登陆成功")
+                    # 登录成功，并跳转到主页，且主页显示用户名
+                    return result.result(message="两次密码一致，且密码验证成功，登录成功")
                 else:
                     # print('两次密码不一致')
-                    return result.params_error(message="两次密码不一致，登陆失败")
+                    return result.params_error(message="两次密码不一致，登录失败")
             else:
+                return result.params_error(message="密码错误，登录失败")
 
-                return result.params_error(message="密码不正确，登陆失败")
         except Exception as e:
-            logger.error("用户登陆失败：", e)
-            # print('没有这个用户%s' % e)
-            return result.params_error(message="请校验登录名")
+            logger.error("用户登录失败：", e)
+            print('没有这个用户%s' % e)
+            return result.params_error(message=e)
 
 
 class Register_View(View):
@@ -80,12 +90,18 @@ class Register_View(View):
         else:
             # 新建用户
             try:
-                user = User()
-                user.username = name
-                user.email = email
-                user.password = password
 
-                user.save()
+                query_result = User(username=name, is_staff=0, email=email)
+                query_result.set_password(password)
+
+                query_result.save()
+
+                # user = User()
+                # user.username = name
+                # user.email = email
+                # user.password = password
+                #
+                # user.save()
             except Exception as e:
                 logger.error("注册用户失败：", e)
                 return result.params_error(message=e)
@@ -94,7 +110,7 @@ class Register_View(View):
             data = {
                 "username": name,
                 "email": email,
-                "userid": user.id
+                "userid": query_result.id
             }
             return result.result(message='注册成功', data=data)
 
