@@ -32,74 +32,79 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-	'simpleui',
-	'django.contrib.admin',
-	'django.contrib.auth',
-	'django.contrib.contenttypes',
-	'django.contrib.sessions',
-	'django.contrib.messages',
-	'django.contrib.staticfiles',
-	'corsheaders',
-	'rest_framework',
-	'apps.users',
-	'apps.search',
-	'apps.service',
-	'apps.nlp'
+    # 'simpleui',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'corsheaders',
+    'rest_framework',
+    'apps.users',
+    'apps.search',
+    'apps.service',
+    'apps.nlp'
 ]
 
 MIDDLEWARE = [
-	'django.middleware.security.SecurityMiddleware',
-	'django.contrib.sessions.middleware.SessionMiddleware',
-	'corsheaders.middleware.CorsMiddleware',
-	'django.middleware.common.CommonMiddleware',
-	# 'django.middleware.csrf.CsrfViewMiddleware',
-	'django.contrib.auth.middleware.AuthenticationMiddleware',
-	'django.contrib.messages.middleware.MessageMiddleware',
-	'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'shiwu.urls'
 
 TEMPLATES = [
-	{
-		'BACKEND': 'django.template.backends.django.DjangoTemplates',
-		# 'DIRS': ['frontend/dist/templates'],
-		'DIRS': [os.path.join(BASE_DIR, 'frontend/dist/templates')],
-		'APP_DIRS': True,
-		'OPTIONS': {
-			'context_processors': [
-				'django.template.context_processors.debug',
-				'django.template.context_processors.request',
-				'django.contrib.auth.context_processors.auth',
-				'django.contrib.messages.context_processors.messages',
-			],
-		},
-	},
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # 'DIRS': ['frontend/dist/templates'],
+        'DIRS': [os.path.join(BASE_DIR, '/frontend/dist/templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
 ]
+# STATICFILES_DIRS = os.path.join(BASE_DIR, 'frontend/dist/static')
+STATIC_ROOT = os.path.join(BASE_DIR, '/frontend/dist/static')
+#  设置session和cookie的过期时间
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_COOKIE_AGE = 100
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_METHODS = (
-	'DELETE',
-	'GET',
-	# 'OPTIONS',
-	'PATCH',
-	'POST',
-	'PUT',
-	'VIEW',
+    'DELETE',
+    'GET',
+    # 'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+    'VIEW',
 )
 
 CORS_ALLOW_HEADERS = (
-	'XMLHttpRequest',
-	'X_FILENAME',
-	'accept-encoding',
-	'authorization',
-	'content-type',
-	'dnt',
-	'origin',
-	'user-agent',
-	'x-csrftoken',
-	'x-requested-with',
-	'Pragma',
+    'XMLHttpRequest',
+    'X_FILENAME',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    'Pragma',
 )
 
 WSGI_APPLICATION = 'shiwu.wsgi.application'
@@ -108,40 +113,48 @@ WSGI_APPLICATION = 'shiwu.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-	# 'default': {
-	#     'ENGINE': 'django.db.backends.sqlite3',
-	#     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-	# }
-	'default': {
-		'ENGINE': 'django.db.backends.mysql',
-		'NAME': 'shiwu',
-		'USER': 'wy',
-		'PASSWORD': 'mysql',
-		'HOST': '127.0.0.1',
-		'PORT': '3306',
-		'TEST': {
-			'CHARSET': 'utf8',
-			'COLLATION': 'utf8_general_ci'
-		}
-	}
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'shiwu',
+        'USER': 'wy',
+        'PASSWORD': 'mysql',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'TEST': {
+            'CHARSET': 'utf8',
+            'COLLATION': 'utf8_general_ci'
+        }
+    }
 }
-
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-	{
-		'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-	},
-	{
-		'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-	},
-	{
-		'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-	},
-	{
-		'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-	},
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
 ]
 
 # Internationalization
@@ -161,7 +174,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [  ## 添加静态文件路径
-	os.path.join(BASE_DIR, "frontend/dist/static"),
+    os.path.join(BASE_DIR, "frontend/dist/static"),
 ]
 
 # 扩展user
@@ -172,43 +185,43 @@ SECRET_KEY_BAIDU = '5PAl9X8uoBbAbRpYlzXXcUqnRKGq0cvs'
 
 # 日志管理
 LOGGING = {
-	'version': 1,
-	'disable_existing_loggers': False,  # 是否禁用已经存在的日志器
-	'formatters': {  # 日志信息显示的格式
-		'verbose': {
-			'format': '%(levelname)s %(asctime)s %(module)s %(lineno)d %(message)s'
-		},
-		'simple': {
-			'format': '%(levelname)s %(module)s %(lineno)d %(message)s'
-		},
-	},
-	'filters': {  # 对日志进行过滤
-		'require_debug_true': {  # django在debug模式下才输出日志
-			'()': 'django.utils.log.RequireDebugTrue',
-		},
-	},
-	'handlers': {  # 日志处理方法
-		'console': {  # 向终端中输出日志
-			'level': 'INFO',
-			'filters': ['require_debug_true'],
-			'class': 'logging.StreamHandler',
-			'formatter': 'simple'
-		},
-		'file': {  # 向文件中输出日志
-			'level': 'INFO',
-			'class': 'logging.handlers.RotatingFileHandler',
-			'filename': os.path.join(os.path.dirname(BASE_DIR), "shiwu/logs/shiwu.log"),  # 日志文件的位置
-			'maxBytes': 300 * 1024 * 1024,
-			'backupCount': 10,
-			'formatter': 'verbose'
-		},
-	},
+    'version': 1,
+    'disable_existing_loggers': False,  # 是否禁用已经存在的日志器
+    'formatters': {  # 日志信息显示的格式
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(lineno)d %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(module)s %(lineno)d %(message)s'
+        },
+    },
+    'filters': {  # 对日志进行过滤
+        'require_debug_true': {  # django在debug模式下才输出日志
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    'handlers': {  # 日志处理方法
+        'console': {  # 向终端中输出日志
+            'level': 'INFO',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+        'file': {  # 向文件中输出日志
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(os.path.dirname(BASE_DIR), "shiwu/logs/shiwu.log"),  # 日志文件的位置
+            'maxBytes': 300 * 1024 * 1024,
+            'backupCount': 10,
+            'formatter': 'verbose'
+        },
+    },
 
-	'loggers': {  # 日志器
-		'django': {  # 定义了一个名为django的日志器
-			'handlers': ['console', 'file'],  # 可以同时向终端与文件中输出日志
-			'propagate': True,  # 是否继续传递日志信息
-			'level': 'INFO',  # 日志器接收的最低日志级别
-		},
-	}
+    'loggers': {  # 日志器
+        'django': {  # 定义了一个名为django的日志器
+            'handlers': ['console', 'file'],  # 可以同时向终端与文件中输出日志
+            'propagate': True,  # 是否继续传递日志信息
+            'level': 'INFO',  # 日志器接收的最低日志级别
+        },
+    }
 }

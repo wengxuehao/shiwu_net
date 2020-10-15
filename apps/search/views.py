@@ -78,6 +78,7 @@ class Character_recognition(View):
                     }
                 return JsonResponse(data=data, json_dumps_params={'ensure_ascii': False})
             except Exception as e:
+                print(e)
                 return HttpResponse('请提交带文字的图片')
         else:
             return HttpResponse('请先提交文字图片')

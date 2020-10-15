@@ -70,7 +70,8 @@ class UserView(View):
 
         except Exception as e:
             logger.error("用户登录失败：", e)
-            print('没有这个用户%s' % e)
+            # print('没有这个用户%s' % e)
+            logger.error("没有这个用户")
             return result.params_error(message=e)
 
 

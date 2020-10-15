@@ -595,3 +595,140 @@ INFO 2019-11-01 10:01:07,671 basehttp 154 "GET /service/Vision/ HTTP/1.1" 200 49
 INFO 2019-11-01 10:01:15,339 basehttp 154 "GET /service/Vision/ HTTP/1.1" 200 49
 INFO 2019-11-01 10:01:32,498 basehttp 154 "GET /service/Vision/ HTTP/1.1" 200 57
 INFO 2019-11-01 10:02:02,683 basehttp 154 "GET /service/Vision/ HTTP/1.1" 200 107
+INFO 2020-08-29 07:43:20,198 basehttp 154 "GET / HTTP/1.1" 200 9704
+INFO 2020-08-29 07:43:20,223 basehttp 154 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2020-08-29 07:43:20,228 basehttp 154 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2020-08-29 07:43:20,232 basehttp 154 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2020-08-29 07:43:20,233 basehttp 154 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2020-08-29 07:43:20,242 basehttp 154 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+INFO 2020-08-29 07:43:20,242 basehttp 154 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2020-08-29 07:43:20,261 basehttp 154 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2020-08-29 07:43:20,271 basehttp 154 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2020-08-29 07:43:20,272 basehttp 154 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2020-08-29 07:43:20,280 basehttp 154 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+INFO 2020-08-29 07:43:20,302 basehttp 154 "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+WARNING 2020-08-29 07:43:20,477 log 228 Not Found: /favicon.ico
+WARNING 2020-08-29 07:43:20,478 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 3672
+INFO 2020-08-29 07:43:24,372 basehttp 154 "GET /users/ HTTP/1.1" 200 14604
+INFO 2020-09-08 09:31:31,324 basehttp 154 "GET / HTTP/1.1" 200 9704
+INFO 2020-09-08 09:31:31,373 basehttp 154 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2020-09-08 09:31:31,373 basehttp 154 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2020-09-08 09:31:31,375 basehttp 154 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2020-09-08 09:31:31,376 basehttp 154 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2020-09-08 09:31:31,394 basehttp 154 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2020-09-08 09:31:31,398 basehttp 154 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2020-09-08 09:31:31,398 basehttp 154 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+INFO 2020-09-08 09:31:31,409 basehttp 154 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2020-09-08 09:31:31,418 basehttp 154 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2020-09-08 09:31:31,425 basehttp 154 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+INFO 2020-09-08 09:31:31,449 basehttp 154 "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+WARNING 2020-09-08 09:31:31,579 log 228 Not Found: /favicon.ico
+WARNING 2020-09-08 09:31:31,579 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 3672
+WARNING 2020-09-08 09:32:19,550 log 228 Not Found: /
+WARNING 2020-09-08 09:32:19,551 basehttp 154 "GET / HTTP/1.1" 404 2344
+WARNING 2020-09-08 09:32:19,830 log 228 Not Found: /favicon.ico
+WARNING 2020-09-08 09:32:19,830 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 2395
+WARNING 2020-09-08 09:32:28,230 log 228 Not Found: /
+WARNING 2020-09-08 09:32:28,231 basehttp 154 "GET / HTTP/1.1" 404 2344
+WARNING 2020-09-08 09:32:28,981 log 228 Not Found: /favicon.ico
+WARNING 2020-09-08 09:32:28,982 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 2395
+WARNING 2020-09-08 09:32:37,405 log 228 Not Found: /user/lgin
+WARNING 2020-09-08 09:32:37,405 basehttp 154 "GET /user/lgin HTTP/1.1" 404 2980
+INFO 2020-09-08 09:32:45,676 basehttp 154 "GET /user/login HTTP/1.1" 301 0
+INFO 2020-09-08 09:32:45,694 basehttp 154 "GET /user/login/ HTTP/1.1" 200 2085
+INFO 2020-09-08 09:32:45,770 basehttp 154 "GET /static/media/bcg1.jpg HTTP/1.1" 200 260080
+INFO 2020-09-08 09:32:45,843 basehttp 154 "GET /static/media/favicon.ico HTTP/1.1" 200 48702
+INFO 2020-09-08 09:32:49,838 basehttp 154 "POST /user/login/ HTTP/1.1" 200 96
+INFO 2020-09-08 09:32:53,184 basehttp 154 "GET /user/login/ HTTP/1.1" 200 2085
+INFO 2020-09-08 09:33:00,266 basehttp 154 "POST /user/login/ HTTP/1.1" 200 96
+INFO 2020-09-08 09:33:02,575 basehttp 154 "GET /user/login/ HTTP/1.1" 200 2085
+WARNING 2020-09-09 19:44:00,838 log 228 Not Found: /
+WARNING 2020-09-09 19:44:00,838 basehttp 154 "GET / HTTP/1.1" 404 2344
+WARNING 2020-09-09 19:44:01,100 log 228 Not Found: /favicon.ico
+WARNING 2020-09-09 19:44:01,101 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 2395
+WARNING 2020-09-09 19:44:09,071 log 228 Not Found: /search
+WARNING 2020-09-09 19:44:09,071 basehttp 154 "GET /search HTTP/1.1" 404 2380
+WARNING 2020-09-09 19:44:35,902 log 228 Not Found: /search/
+WARNING 2020-09-09 19:44:35,903 basehttp 154 "GET /search/ HTTP/1.1" 404 3503
+INFO 2020-09-09 19:44:44,336 basehttp 154 "GET /search/animal HTTP/1.1" 301 0
+INFO 2020-09-09 19:44:44,347 basehttp 154 "GET /search/animal/ HTTP/1.1" 200 670
+INFO 2020-09-09 19:44:44,367 basehttp 154 "GET /static/media/lant.jpg HTTP/1.1" 200 216973
+INFO 2020-09-09 19:45:21,478 basehttp 154 "GET /user/index/ HTTP/1.1" 200 1718
+INFO 2020-09-09 19:45:21,492 basehttp 154 "GET /static/media/search.png HTTP/1.1" 200 36238
+INFO 2020-09-09 19:45:24,218 basehttp 154 "GET /service/Voice/ HTTP/1.1" 200 426
+INFO 2020-09-09 19:45:28,337 basehttp 154 "GET /service/Vision/ HTTP/1.1" 200 107
+INFO 2020-09-09 19:45:34,143 basehttp 154 "GET /service/NLP/ HTTP/1.1" 200 476
+INFO 2020-09-09 19:45:37,694 basehttp 154 "GET /nlp/emotion/ HTTP/1.1" 200 532
+INFO 2020-09-09 19:45:42,030 basehttp 154 "GET /service/Vision/ HTTP/1.1" 200 107
+INFO 2020-09-09 19:46:40,041 basehttp 154 "GET /service/Vision/ HTTP/1.1" 200 740
+INFO 2020-09-09 19:46:42,123 basehttp 154 "GET /search/char/ HTTP/1.1" 200 670
+INFO 2020-09-11 21:20:48,906 basehttp 154 "GET /service/Vision/ HTTP/1.1" 200 740
+INFO 2020-09-11 21:20:52,359 basehttp 154 "GET /search/plant/ HTTP/1.1" 200 692
+INFO 2020-09-11 21:21:20,183 basehttp 154 "POST /search/plant/ HTTP/1.1" 200 355
+INFO 2020-09-11 21:21:25,344 basehttp 154 "GET /search/plant/ HTTP/1.1" 200 692
+INFO 2020-09-11 21:21:30,402 basehttp 154 "GET /search/animal/ HTTP/1.1" 200 670
+INFO 2020-09-11 21:21:39,817 basehttp 154 "GET /search/char/ HTTP/1.1" 200 670
+INFO 2020-09-11 21:21:49,859 basehttp 154 "POST /search/char/ HTTP/1.1" 200 27
+INFO 2020-09-11 21:22:41,889 basehttp 154 "GET /search/char/ HTTP/1.1" 200 670
+INFO 2020-09-11 21:22:45,825 basehttp 154 "POST /search/char/ HTTP/1.1" 200 27
+INFO 2020-09-11 21:25:00,416 basehttp 154 "GET /search/char/ HTTP/1.1" 200 670
+ERROR 2020-09-11 21:25:08,470 log 228 Internal Server Error: /search/char/
+Traceback (most recent call last):
+  File "D:\wxh\shiwu\apps\search\views.py", line 70, in post
+    f.writelines(i + "\n")
+UnicodeEncodeError: 'gbk' codec can't encode character '\ub9fa' in position 0: illegal multibyte sequence
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\wxh\shiwu\apps\search\views.py", line 81, in post
+    print(e.decode('utf-8'))
+AttributeError: 'UnicodeEncodeError' object has no attribute 'decode'
+ERROR 2020-09-11 21:25:08,470 basehttp 154 "POST /search/char/ HTTP/1.1" 500 111498
+ERROR 2020-09-11 21:25:28,071 log 228 Internal Server Error: /search/char/
+Traceback (most recent call last):
+  File "D:\wxh\shiwu\apps\search\views.py", line 70, in post
+    f.writelines(i + "\n")
+UnicodeEncodeError: 'gbk' codec can't encode character '\ub9fa' in position 0: illegal multibyte sequence
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Anaconda\envs\tensorflow\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\wxh\shiwu\apps\search\views.py", line 81, in post
+    print(e.encode('utf-8'))
+AttributeError: 'UnicodeEncodeError' object has no attribute 'encode'
+ERROR 2020-09-11 21:25:28,071 basehttp 154 "POST /search/char/ HTTP/1.1" 500 111502
+INFO 2020-09-11 21:25:58,213 basehttp 154 "POST /search/char/ HTTP/1.1" 200 167
+INFO 2020-09-11 21:26:08,901 basehttp 154 "GET /search/char/ HTTP/1.1" 200 670
+WARNING 2020-09-14 10:06:02,097 log 228 Not Found: /
+WARNING 2020-09-14 10:06:02,097 basehttp 154 "GET / HTTP/1.1" 404 2344
+WARNING 2020-09-14 10:06:02,174 log 228 Not Found: /favicon.ico
+WARNING 2020-09-14 10:06:02,175 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 2395
+WARNING 2020-09-14 10:07:09,907 log 228 Not Found: /
+WARNING 2020-09-14 10:07:09,907 basehttp 154 "GET / HTTP/1.1" 404 2345
+WARNING 2020-09-14 10:08:18,865 log 228 Not Found: /
+WARNING 2020-09-14 10:08:18,865 basehttp 154 "GET / HTTP/1.1" 404 2345
+WARNING 2020-10-15 20:25:56,807 log 228 Not Found: /
+WARNING 2020-10-15 20:25:56,808 basehttp 154 "GET / HTTP/1.1" 404 2345
+WARNING 2020-10-15 20:25:56,891 log 228 Not Found: /favicon.ico
+WARNING 2020-10-15 20:25:56,892 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 2396
